@@ -14,6 +14,10 @@ public class User {
 
     private String name;
 
+    private String password;
+
+    private String email;
+
     public int getId() {
         return id;
     }
@@ -46,9 +50,6 @@ public class User {
         this.email = email;
     }
 
-    private String password;
-
-    private String email;
 
 
 }

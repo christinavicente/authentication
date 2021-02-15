@@ -33,4 +33,9 @@ public class LoginService {
         return (user.getPassword().equals(enteredPassword));
     }
 
+    public boolean Authenticate(String name, String password){
+        User user=userRepository.findByName(name);
+        return AuthenticateUser(user,password);
+    }
+
 }
