@@ -46,7 +46,7 @@ public class AutenticationTests {
 
 
 
-/*
+    @Test
     public void AddAndCheckUser() {
         LoginService service = new LoginService();
 
@@ -59,11 +59,25 @@ public class AutenticationTests {
 
         boolean authenticated = service.AuthenticateUser(dummyUser, "password");
 
-        assertThat(authenticated).isEqualTo(true);
-        //assertEquals(authenticated, true);
+        //assertThat(authenticated).isEqualTo(true);
+        assertEquals(authenticated, true);
 
     }
-    */
+
+    @Test
+    public void findAddedUser(){
+        LoginService service = new LoginService();
+
+        User dummyUser = new User();
+        dummyUser.setName("Dummy");
+        dummyUser.setEmail("test@test.com");
+        dummyUser.setPassword("password");
+
+        service.AddUser(dummyUser);
+        boolean authenticated=service.Authenticate("Dummy","password");
+        assertEquals(authenticated, true);
+    }
+
 
 
 
