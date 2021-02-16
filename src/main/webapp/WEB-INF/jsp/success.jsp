@@ -1,7 +1,7 @@
 <html>
 
 <head>
-<title>User Login</title>
+<title>success</title>
 </head>
 
 <body>
