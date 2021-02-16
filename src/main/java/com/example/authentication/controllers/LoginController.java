@@ -31,9 +31,16 @@ public class LoginController {
         }
 
         return "error";
-
-
-
     }
-
+    
+    @GetMapping("/success")
+    public String showSuccess(ModelMap map){
+        return "success";
+        
+    }
+    
+    @GetMapping("/error")
+    public String showError(ModelMap map){
+        return "error";   
+    }
 }
